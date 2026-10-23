@@ -1,0 +1,247 @@
+:root {
+    --ink: #20233a;
+    --muted: #777b91;
+    --purple: #6c5ce7;
+    --line: #e9e8f3;
+    --paper: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 10% 10%, #e4e5ff, transparent 35%),
+        linear-gradient(135deg, #f7f6ff, #eef4ff);
+}
+
+.topbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand {
+    color: var(--ink);
+    font-weight: 800;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.tagline, .subtitle {
+    color: var(--muted);
+}
+
+.page {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 0 22px;
+}
+
+.hero {
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 12px 0;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: -1.5px;
+}
+
+.subtitle {
+    margin-bottom: 32px;
+}
+
+.quote-card {
+    max-width: 720px;
+    margin: auto;
+    padding: 35px;
+    background: var(--paper);
+    border: 1px solid #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px #39376a12;
+}
+
+.quote-mark {
+    height: 45px;
+    color: var(--purple);
+    font-family: Georgia, serif;
+    font-size: 75px;
+    line-height: 1;
+}
+
+#quote {
+    font-family: Georgia, serif;
+    font-size: clamp(21px, 3vw, 29px);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#author {
+    margin: 20px 0 28px;
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 17px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: white;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s, background .2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid #aaa0ff;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+button.primary {
+    background: var(--purple);
+    color: white;
+    border-color: var(--purple);
+}
+
+button.primary:hover {
+    background: #5545d4;
+}
+
+#message {
+    min-height: 20px;
+    margin-bottom: 0;
+    color: #27805a;
+    font-size: 13px;
+}
+
+.favorites-section {
+    margin-top: 65px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 5px 0;
+    font-size: 27px;
+}
+
+.count {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.favorites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+}
+
+.favorite-card {
+    padding: 20px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+}
+
+.favorite-card p {
+    line-height: 1.6;
+}
+
+.favorite-card .favorite-author {
+    color: var(--purple);
+    font-size: 13px;
+}
+
+.favorite-card button {
+    margin: 4px 4px 0 0;
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+.empty {
+    color: var(--muted);
+    padding: 15px 0;
+}
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 550px) {
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page {
+        margin-top: 15px;
+    }
+
+    .quote-card {
+        padding: 24px 17px;
+    }
+
+    .actions button {
+        flex: 1 1 40%;
+    }
+.site-footer {
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
+
+.site-footer .heart {
+    color: #e63946;
+}
+
+.site-footer .creator {
+    color: #4f46e5;
+    font-weight: bold;
+}
+}
